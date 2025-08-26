@@ -1,186 +1,198 @@
 <template>
-  <div class="skills-alt min-h-screen flex flex-col items-center py-10 px-2">
-    <h1 class="skills-alt-title mb-8">Tus Skills</h1>
-    <div class="skills-alt-form-card">
-      <span class="skills-alt-icon">🔧</span>
-      <div class="skills-alt-form-content">
-        <div class="skills-alt-form-name">Agregar Skill</div>
-        <form class="skills-alt-form" style="display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center;">
-          <input type="text" placeholder="Ejemplo: CSS, Vue.js, etc." class="skills-alt-input" disabled />
-          <select class="skills-alt-select" disabled>
+  <div class="skills-dark min-h-screen flex flex-col items-center py-10 px-2">
+    <h1 class="skills-dark-title mb-8">Tus Skills</h1>
+
+    <!-- Formulario -->
+    <div class="skills-dark-form-card">
+      <span class="skills-dark-icon">✨</span>
+      <div class="skills-dark-form-content">
+        <div class="skills-dark-form-name">Agregar Skill</div>
+        <form class="skills-dark-form" style="display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center;">
+          <input type="text" placeholder="Ejemplo: CSS, Vue.js, etc." class="skills-dark-input" disabled />
+          <select class="skills-dark-select" disabled>
             <option>Nivel 1</option>
             <option>Nivel 2</option>
             <option>Nivel 3</option>
             <option>Nivel 4</option>
             <option>Nivel 5</option>
           </select>
-          <button type="button" class="skills-alt-btn" disabled>Agregar</button>
+          <button type="button" class="skills-dark-btn" disabled>Agregar</button>
         </form>
       </div>
     </div>
-    <div class="skills-alt-history-card">
-      <span class="skills-alt-icon">📋</span>
-      <div class="skills-alt-history-content">
-        <div class="skills-alt-history-name">Historial</div>
-        <ul class="skills-alt-list">
-          <li class="skills-alt-list-item">
-            <span class="skills-alt-list-skill">Skill Example</span>
-            <select class="skills-alt-list-select" disabled>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
+
+    <!-- Historial -->
+    <div class="skills-dark-history-card">
+      <span class="skills-dark-icon">📜</span>
+      <div class="skills-dark-history-content">
+        <div class="skills-dark-history-name">Historial</div>
+        <ul class="skills-dark-list">
+          <li class="skills-dark-list-item">
+            <span class="skills-dark-list-skill">Skill Example</span>
+            <select class="skills-dark-list-select" disabled>
+              <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
             </select>
-            <button type="button" class="skills-alt-list-remove" disabled title="Eliminar">
-              <span class="skills-alt-list-remove-icon">🗑️</span>
+            <button type="button" class="skills-dark-list-remove" disabled title="Eliminar">
+              <span class="skills-dark-list-remove-icon">❌</span>
             </button>
           </li>
-          <li class="skills-alt-list-item">
-            <span class="skills-alt-list-skill">Another Skill</span>
-            <select class="skills-alt-list-select" disabled>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
+          <li class="skills-dark-list-item">
+            <span class="skills-dark-list-skill">Another Skill</span>
+            <select class="skills-dark-list-select" disabled>
+              <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
             </select>
-            <button type="button" class="skills-alt-list-remove" disabled title="Eliminar">
-              <span class="skills-alt-list-remove-icon">🗑️</span>
+            <button type="button" class="skills-dark-list-remove" disabled title="Eliminar">
+              <span class="skills-dark-list-remove-icon">❌</span>
             </button>
           </li>
         </ul>
       </div>
     </div>
-    <div class="skills-alt-nav">
-      <router-link to="/badges" class="skills-alt-link">Ver Badges</router-link>
-      <router-link to="/" class="skills-alt-link">Inicio</router-link>
+
+    <!-- Navegación -->
+    <div class="skills-dark-nav">
+      <router-link to="/badges" class="skills-dark-link">Ver Badges</router-link>
+      <router-link to="/" class="skills-dark-link">Inicio</router-link>
     </div>
   </div>
 </template>
+
 <style>
-.skills-alt {
-  background: #fffbe0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.skills-dark {
+  background: #0f172a; /* azul muy oscuro */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #e2e8f0;
 }
-.skills-alt-title {
-  color: #ff006e;
-  font-size: 2.2rem;
+
+.skills-dark-title {
+  color: #38bdf8; /* azul cielo */
+  font-size: 2.4rem;
   font-weight: bold;
   text-align: center;
 }
-.skills-alt-form-card, .skills-alt-history-card {
-  background: #fff;
-  border: 1px solid #ffbe0b;
-  border-radius: 0.7rem;
+
+.skills-dark-form-card,
+.skills-dark-history-card {
+  background: #1e293b; /* gris oscuro */
+  border: 1px solid #334155;
+  border-radius: 0.8rem;
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  padding: 1rem 1.2rem;
-  max-width: 340px;
-  margin-bottom: 1.2rem;
+  padding: 1.2rem;
+  max-width: 380px;
+  margin-bottom: 1.5rem;
   width: 100%;
-  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
-.skills-alt-icon {
+
+.skills-dark-icon {
   font-size: 2rem;
-  flex-shrink: 0;
+  color: #38bdf8;
 }
-.skills-alt-form-content, .skills-alt-history-content {
-  flex: 1;
-  min-width: 0;
-}
-.skills-alt-form-name, .skills-alt-history-name {
-  color: #ffbe0b;
+
+.skills-dark-form-name,
+.skills-dark-history-name {
+  color: #10b981; /* verde esmeralda */
   font-weight: bold;
-  font-size: 1.1rem;
-  margin-bottom: 0.2rem;
+  font-size: 1.2rem;
 }
-.skills-alt-form {
-  margin-top: 0.5rem;
+
+.skills-dark-form {
+  margin-top: 0.7rem;
   width: 100%;
 }
-.skills-alt-input, .skills-alt-select {
+
+.skills-dark-input,
+.skills-dark-select {
   border-radius: 0.5rem;
-  border: 1px solid #ffbe0b;
-  padding: 0.4rem 0.8rem;
+  border: 1px solid #334155;
+  padding: 0.5rem 0.8rem;
   font-size: 1rem;
-  background: #fffbe0;
-  color: #8338ec;
+  background: #0f172a;
+  color: #e2e8f0;
   outline: none;
-  min-width: 120px;
-  box-sizing: border-box;
+  min-width: 130px;
 }
-.skills-alt-btn {
-  background: #ffbe0b;
-  color: #fff;
+
+.skills-dark-btn {
+  background: #38bdf8;
+  color: #0f172a;
   font-weight: bold;
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 0.5rem;
   border: none;
   min-width: 90px;
+  cursor: not-allowed;
+  opacity: 0.7;
 }
-.skills-alt-list {
+
+.skills-dark-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.skills-alt-list-item {
+
+.skills-dark-list-item {
   display: flex;
   align-items: center;
   gap: 0.7rem;
-  background: #fffbe0;
-  border-radius: 0.5rem;
-  padding: 0.5rem 0.8rem;
-  margin-bottom: 0.5rem;
-  box-sizing: border-box;
+  background: #0f172a;
+  border-radius: 0.6rem;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 0.6rem;
 }
-.skills-alt-list-skill {
+
+.skills-dark-list-skill {
   font-weight: bold;
-  color: #ffbe0b;
-  min-width: 90px;
+  color: #38bdf8;
+  min-width: 100px;
 }
-.skills-alt-list-select {
+
+.skills-dark-list-select {
   border-radius: 0.5rem;
-  border: 1px solid #ffbe0b;
-  padding: 0.2rem 0.7rem;
+  border: 1px solid #334155;
+  padding: 0.3rem 0.7rem;
   font-size: 1rem;
-  background: #fff;
-  color: #8338ec;
+  background: #1e293b;
+  color: #e2e8f0;
   outline: none;
   min-width: 60px;
 }
-.skills-alt-list-remove {
+
+.skills-dark-list-remove {
   background: none;
-  color: #ff006e;
-  font-weight: bold;
+  color: #f43f5e; /* rojo rosado */
   border: none;
-  cursor: pointer;
-  text-decoration: underline;
+  cursor: not-allowed;
   font-size: 1rem;
-  min-width: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.skills-alt-list-remove-icon {
+
+.skills-dark-list-remove-icon {
   font-size: 1.2rem;
 }
-.skills-alt-nav {
+
+.skills-dark-nav {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  margin-top: 1.5rem;
+  margin-top: 1.8rem;
 }
-.skills-alt-link {
-  background: #ffbe0b;
+
+.skills-dark-link {
+  background: #10b981; 
   color: #fff;
   font-weight: bold;
-  padding: 0.5rem 1.2rem;
+  padding: 0.6rem 1.4rem;
   border-radius: 0.5rem;
   text-decoration: none;
+  transition: background 0.3s;
 }
-.skills-alt-link:hover {
-  background: #ff006e;
+
+.skills-dark-link:hover {
+  background: #38bdf8;
 }
 </style>
